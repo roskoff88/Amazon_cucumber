@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <parameter name="AmazonURL" value="http://www.amazon.com/"/>
+  <test name="Amazon automation tests(failed)" parallel="none">
+    <classes>
+      <class name="cucumberTraining.CukesRunnerTest">
+        <methods>
+          <include name="run_cukes"/>
+        </methods>
+      </class> <!-- cucumberTraining.CukesRunnerTest -->
+    </classes>
+  </test> <!-- Amazon automation tests(failed) -->
+</suite> <!-- Failed suite [Suite] -->

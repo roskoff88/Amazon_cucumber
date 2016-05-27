@@ -1,0 +1,4 @@
+pageObject/AmazonHomePage.class
+cucumberTraining/HooksTest.class
+cucumberTraining/StepDefinitionTest.class
+cucumberTraining/CukesRunnerTest.class

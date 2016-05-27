@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" parallel="none">
+ 	
+ 	<!-- TEST DATA -->
+    <parameter name="AmazonURL" value="http://www.amazon.com/"/>
+    
+ 	<test name="Amazon automation tests">
+        <packages>
+            <package name="cucumberTraining"/>
+        </packages>
+    </test>
+  
+</suite>

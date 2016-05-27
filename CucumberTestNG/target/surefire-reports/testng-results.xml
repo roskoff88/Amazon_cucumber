@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[<div "featureFile">Feature File: AmazonSpec.feature</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "feature">Feature: validate Amazon site is working</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "scenario">Scenario: validating Amazon site is available</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Given  I have the current Amazon url (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">When  I open the Amazon url (passed : 8s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[ I have the correct url for Amazon site]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  Amazon page should be displayed (passed : 0s)</div>]]>
+    </line>
+    <line>
+      <![CDATA[ I have the correct page title for Amazon site]]>
+    </line>
+    <line>
+      <![CDATA[<div "result">Then  Validate Amazon page title (passed : 0s)</div>]]>
+    </line>
+  </reporter-output>
+  <suite name="Suite" duration-ms="12816" started-at="2016-05-27T16:21:41Z" finished-at="2016-05-27T16:21:53Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="AbstractTestNGCucumberTests.run_cukes()[pri:0, instance:cucumberTraining.CukesRunnerTest@1593948d]" name="run_cukes" class="cucumber.api.testng.AbstractTestNGCucumberTests"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="Amazon automation tests" duration-ms="12816" started-at="2016-05-27T16:21:41Z" finished-at="2016-05-27T16:21:53Z">
+      <class name="cucumberTraining.CukesRunnerTest">
+        <test-method status="PASS" signature="run_cukes()[pri:0, instance:cucumberTraining.CukesRunnerTest@1593948d]" name="run_cukes" duration-ms="12810" started-at="2016-05-27T13:21:41Z" description="Runs Cucumber Features" finished-at="2016-05-27T13:21:53Z">
+          <reporter-output>
+            <line>
+              <![CDATA[<div "featureFile">Feature File: AmazonSpec.feature</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "feature">Feature: validate Amazon site is working</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "scenario">Scenario: validating Amazon site is available</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Given  I have the current Amazon url (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">When  I open the Amazon url (passed : 8s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[ I have the correct url for Amazon site]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  Amazon page should be displayed (passed : 0s)</div>]]>
+            </line>
+            <line>
+              <![CDATA[ I have the correct page title for Amazon site]]>
+            </line>
+            <line>
+              <![CDATA[<div "result">Then  Validate Amazon page title (passed : 0s)</div>]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- run_cukes -->
+      </class> <!-- cucumberTraining.CukesRunnerTest -->
+    </test> <!-- Amazon automation tests -->
+  </suite> <!-- Suite -->
+</testng-results>

@@ -1,2 +1,2 @@
 # Amazon_cucumber
-Automation test implement in Java using Selenium, TestNG and Cucumber
+Automation tests implemented in Java using Selenium, TestNG and Cucumber frameworks.

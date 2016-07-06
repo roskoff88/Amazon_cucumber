@@ -14,8 +14,9 @@ import cucumber.api.testng.AbstractTestNGCucumberTests;
 		features = "src/test/java/features", 
 		plugin = {"pretty", "html:target/cucumber-html-report"},
 		//glue = " ",
-		tags = "@AmazonTest"
+		tags = "@AmazonSearchProduct"
 		)
+
 public class CukesRunnerTest extends AbstractTestNGCucumberTests {
 
 }

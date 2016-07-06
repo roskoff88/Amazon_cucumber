@@ -1,7 +1,6 @@
 package cucumberTraining;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.ITestContext;
 import org.testng.Reporter;
 import org.junit.*;
 
@@ -14,50 +13,47 @@ public class StepDefinitionTest {
 	
 	private WebDriver driver = HooksTest.driver;
 	
-	private String baseURL = "http://www.amazon.com/";
-	private String AmazonPageTitle = "Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more";
-	private String validProduct = "cell phone";
+	private String baseURL = "";
+	private String product = "";
 	
-	@Given("^I have the current Amazon url$")
-	public void i_have_the_current_Amazon_url() throws Throwable {
-		System.out.println("Amazon current url is: " + baseURL);	
+	@Given("^I have the current Amazon url (.*)$")
+	public void i_have_the_current_Amazon_url(String url) throws Throwable {
+		Reporter.log(" Amazon current url is: " + url);
+		this.baseURL = url;
 	}
 
-	@When("^I open the Amazon url$")
+	@When("^I open the given Amazon page url$")
 	public void i_open_the_Amazon_url() throws Throwable {
 		driver.get(baseURL);
 	}
 
-	@Then("^Amazon page should be displayed$")
-	public void Amazon_page_should_be_displayed() throws Throwable {
-		  String currentUrl = driver.getCurrentUrl();
-		  Assert.assertEquals(baseURL, currentUrl);
+	@Then("^The Amazon page should be displayed$")
+	public void the_Amazon_page_should_be_displayed() throws Throwable {
+		  Assert.assertEquals(baseURL, driver.getCurrentUrl());
 		  Reporter.log(" I have the correct url for Amazon site");
 	}
 	
-	@Then("^Validate Amazon page title$")
-	public void Validate_Amazon_page_title() throws Throwable {
-		  String currentPageTitle =  driver.getTitle();
-		  System.out.println("Amazon title is: " + driver.getTitle());
-		  Assert.assertEquals(AmazonPageTitle, currentPageTitle);
+	@Then("^The Amazon page title is (.*)$")
+	public void the_Amazon_page_title_is(String pageTitle) throws Throwable {
+		  Assert.assertEquals(driver.getTitle(), pageTitle);
 		  Reporter.log(" I have the correct page title for Amazon site");
 	}
 	
-	@Given("^I have a valid Amazon product$")
-	public void i_have_a_valid_Amazon_product() throws Throwable {
-		System.out.println("Amazon valid product is: " + validProduct);
+	@Given("^I have the Amazon product (.*)$")
+	public void i_have_the_Amazon_product(String productName) throws Throwable {
+		Reporter.log("Amazon product name is: " + productName);
+		this.product = productName;
 	}
 	
-	@When("^I search a valid product$")
-	public void i_search_a_valid_product() throws Throwable {
+	@When("^I search the given product$")
+	public void i_search_the_given_product() throws Throwable {
 		AmazonHomePage page = new AmazonHomePage(driver);
-		page.Search(validProduct);	
-	
+		page.Search(this.product);	
 	}
 	
-	@Then("^Amazon page should displayed the product$")
-	public void amazon_page_should_displayed_the_product() throws Throwable {
-
-		Assert.assertEquals(driver.getTitle(),"Amazon.com: cell phone");
+	@Then("^The search product is displayed$")
+	public void the_search_product_is_displayed() throws Throwable {
+		Reporter.log("Asserting the product name displayed at the page title...");
+		Assert.assertEquals(driver.getTitle(),"Amazon.com: " + this.product);
 	}
 }

@@ -2,35 +2,34 @@ package pageObject;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;;
-
+import org.openqa.selenium.WebElement;
 
 public class AmazonHomePage {
 	
 	public static WebDriver aDriver;
 	
-	private final static String SELECTOR_SEARCH_BOX = "twotabsearchtextbox";
+	//SELECTOR STRINGS
+	private static final String SELECTOR_SEARCH_BOX = "twotabsearchtextbox";
 	
-	//CONSTRUCTOR
+	
 	/**
-	* Page Constructor used instead of PageFactory since we use Fluent Selenium
+	* Page Constructor used instead of PageFactory since we use Selenium
 	 * @param driver, a WebDriver object
 	 */
 	public AmazonHomePage(WebDriver driver){
 		aDriver = driver;
-		
 	}
 
-	//LOCATORS
+	//Locator
 	public WebElement searchBox(){
 		return aDriver.findElement(By.id(SELECTOR_SEARCH_BOX));
 	}
 	
 	/**
-	 * Performs a simple Google search
+	 * Performs a search for a product at Amazon
 	 */
-	public void Search(String searchQ){
-		this.searchBox().sendKeys(searchQ);
+	public void Search(String productName){
+		this.searchBox().sendKeys(productName);
 		this.searchBox().submit();
 	}
 }

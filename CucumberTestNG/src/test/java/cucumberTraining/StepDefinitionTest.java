@@ -16,7 +16,7 @@ public class StepDefinitionTest {
 	private String baseURL = "";
 	private String product = "";
 	
-	@Given("^I have the current Amazon url (.*)$")
+	@Given("^I have the current Amazon url \"(.*)\"$")
 	public void i_have_the_current_Amazon_url(String url) throws Throwable {
 		Reporter.log(" Amazon current url is: " + url);
 		this.baseURL = url;
@@ -33,13 +33,13 @@ public class StepDefinitionTest {
 		  Reporter.log(" I have the correct url for Amazon site");
 	}
 	
-	@Then("^The Amazon page title is (.*)$")
+	@Then("^The Amazon page title is \"(.*)\"$")
 	public void the_Amazon_page_title_is(String pageTitle) throws Throwable {
 		  Assert.assertEquals(driver.getTitle(), pageTitle);
 		  Reporter.log(" I have the correct page title for Amazon site");
 	}
 	
-	@Given("^I have the Amazon product (.*)$")
+	@Given("^I have the Amazon product \"(.*)\"$")
 	public void i_have_the_Amazon_product(String productName) throws Throwable {
 		Reporter.log("Amazon product name is: " + productName);
 		this.product = productName;

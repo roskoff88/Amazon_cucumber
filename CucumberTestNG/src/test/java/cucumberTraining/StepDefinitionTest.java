@@ -1,6 +1,7 @@
 package cucumberTraining;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
 import org.junit.*;
 
@@ -11,7 +12,7 @@ import pageObject.AmazonHomePage;
 
 public class StepDefinitionTest {
 	
-	private WebDriver driver = HooksTest.driver;
+	private static WebDriver driver = HooksTest.driver;
 	
 	private String baseURL = "";
 	private String product = "";
@@ -48,7 +49,8 @@ public class StepDefinitionTest {
 	@When("^I search the given product$")
 	public void i_search_the_given_product() throws Throwable {
 		AmazonHomePage page = new AmazonHomePage(driver);
-		page.Search(this.product);	
+		page = PageFactory.initElements(driver, AmazonHomePage.class); 
+		page.SearchFor(this.product);	
 	}
 	
 	@Then("^The search product is displayed$")

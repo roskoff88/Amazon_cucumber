@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class AmazonHomePage extends BasePage{
+public class HomePage extends BasePage{
 
 	//SELECTOR STRINGS
 	private static final String SELECTOR_SEARCH_BOX = "twotabsearchtextbox";
@@ -18,7 +18,7 @@ public class AmazonHomePage extends BasePage{
 	* Page Constructor 
 	 * @param driver, a WebDriver object
 	 */
-	public AmazonHomePage(WebDriver driver) {
+	public HomePage(WebDriver driver) {
 		super(driver);
 	}
 	

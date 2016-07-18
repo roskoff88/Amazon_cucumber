@@ -8,7 +8,7 @@ import org.junit.*;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import pageObject.AmazonHomePage;
+import pageObject.HomePage;
 
 public class StepDefinitionTest {
 	
@@ -48,8 +48,8 @@ public class StepDefinitionTest {
 	
 	@When("^I search the given product$")
 	public void i_search_the_given_product() throws Throwable {
-		AmazonHomePage page = new AmazonHomePage(driver);
-		page = PageFactory.initElements(driver, AmazonHomePage.class); 
+		HomePage page = new HomePage(driver);
+		page = PageFactory.initElements(driver, HomePage.class); 
 		page.SearchFor(this.product);	
 	}
 	
